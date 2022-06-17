@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+main section.backImage {
+  position: relative;
+  min-height: 95vh;
+  width: 100%;
+  background-image: url("../images/backgroundimg.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20vh;
+}
+main section.backImage h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin: 2rem 0rem;
+}
+main section.backImage div.search-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+main section.backImage div.search-container .input_destination {
+  width: 30%;
+}
+main section.backImage div.search-container .input_destination input {
+  width: 100%;
+  font-size: 16px;
+  padding: 1rem 0.5rem;
+  border: none;
+}
+main section.backImage div.search-container button {
+  font-size: 16px;
+  padding: 1rem 0.5rem;
+  border: none;
+}/*# sourceMappingURL=Hero.css.map */

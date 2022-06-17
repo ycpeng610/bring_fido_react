@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+main section.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main section.second h2 {
+  font-size: 2.5rem;
+  margin: 3rem 0rem;
+}
+main section.second section.cards {
+  display: flex;
+}
+main section.second section.cards div.card h4 {
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 1rem 0;
+}
+main section.second section.cards div.card p {
+  font-size: 0.8rem;
+}
+main section.second button {
+  border: none;
+  margin: 1.5rem;
+  padding: 0.5rem 3rem;
+  background-color: #02b1e8;
+  color: white;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=Services.css.map */
