@@ -9,6 +9,11 @@
   max-width: 1020px;
   margin: 0 auto;
 }
+@media (max-width: 375px) {
+  .ctr {
+    padding: 0 30px;
+  }
+}
 
 .container {
   display: flex;
@@ -26,16 +31,44 @@ header {
   background-color: white;
   box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
 }
+header .nav-toggle {
+  font-size: 1.5rem;
+  color: rgb(93, 88, 88);
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 375px) {
+  header .nav-toggle {
+    display: flex;
+  }
+}
+header .nav-toggle:hover {
+  color: rgb(136, 134, 134);
+}
 header nav ul {
   display: flex;
   list-style-type: none;
   justify-content: space-around;
 }
-header nav ul li {
+@media (max-width: 375px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+  }
+}
+header nav ul li a {
   color: rgb(93, 88, 88);
   text-transform: uppercase;
   margin: 0 1rem;
   font-size: 0.6rem;
+  text-decoration: none;
+}
+@media (max-width: 375px) {
+  header nav ul li a {
+    color: blue;
+  }
 }
 header span {
   color: #888;
@@ -49,19 +82,25 @@ header div.hdr_segment button {
   cursor: pointer;
   outline: inherit;
 }
-header div.hdr_segment button svg {
-  fill: #888;
-}
 header div.hdr_segment button .circle {
   width: 1.2rem;
+}
+@media (max-width: 375px) {
+  header div.hdr_segment button .circle {
+    display: none;
+  }
 }
 header div.hdr_segment button .caret-down {
   width: 0.5rem;
   margin-right: 1rem;
 }
-header div.hdr_segment button .userLogin {
-  width: 1rem;
+@media (max-width: 375px) {
+  header div.hdr_segment button .caret-down {
+    display: none;
+  }
 }
-header div.hdr_segment button .signUp {
-  align-items: center;
+@media (max-width: 375px) {
+  header div.hdr_segment button .login {
+    display: none;
+  }
 }/*# sourceMappingURL=Navbar.css.map */

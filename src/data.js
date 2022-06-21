@@ -1,3 +1,31 @@
+export const links = [
+  {
+    id: 1,
+    url: "/",
+    text: "hotels",
+  },
+  {
+    id: 2,
+    url: "/restaurant",
+    text: "restaurant",
+  },
+  {
+    id: 3,
+    url: "/activities",
+    text: "activities",
+  },
+  {
+    id: 4,
+    url: "/events",
+    text: "events",
+  },
+  {
+    id: 5,
+    url: "/blog",
+    text: "blog",
+  },
+];
+
 export const blogs = [
   {
     id: 1,

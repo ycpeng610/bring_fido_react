@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Services from "./Components/Services";
@@ -8,14 +8,14 @@ import { blogs, services } from "./data";
 
 function App() {
   // console.log(blogs);
-  const [blogItems, setBlogItems] = useState(blogs);
+  // const [blogItems, setBlogItems] = useState(blogs);
   return (
     <div className="App">
       <Navbar />
       <main>
         <Hero />
         <Services items={services} />
-        <Blog items={blogItems} />
+        <Blog items={blogs} />
       </main>
       <Footer />
     </div>

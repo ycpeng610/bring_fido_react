@@ -16,29 +16,16 @@ main section.backImage {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20vh;
+  padding: 20vh 0;
 }
 main section.backImage h1 {
   font-size: 3.5rem;
   color: white;
   margin: 2rem 0rem;
 }
-main section.backImage div.search-container {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-}
-main section.backImage div.search-container .input_destination {
-  width: 30%;
-}
-main section.backImage div.search-container .input_destination input {
-  width: 100%;
-  font-size: 16px;
-  padding: 1rem 0.5rem;
-  border: none;
-}
-main section.backImage div.search-container button {
-  font-size: 16px;
-  padding: 1rem 0.5rem;
-  border: none;
+@media (max-width: 375px) {
+  main section.backImage h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=Hero.css.map */

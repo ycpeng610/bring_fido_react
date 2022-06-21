@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section class="backImage">
       <h1>Where do you want to bring Fido?</h1>
-      <div class="search-container">
+      {/* <div class="search-container">
         <div class="dropdown">
           <button onclick="myFunction()" class="dropbtn">
             Dropdown
@@ -20,7 +20,7 @@ const Hero = () => {
           <input type="text" placeholder="Search.." name="search" />
         </span>
         <button type="submit">Submit</button>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../Styles/Navbar.css";
 import { FaPaw, FaCaretDown, FaUserAlt } from "react-icons/fa";
+import { links } from "../data";
+import { FaBars } from "react-icons/fa";
 
 function Navbar() {
+  const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
+  useEffect(() => {
+    console.log(linksRef.current.getBoundingClientRect());
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight}px`;
+    }
+    // else {
+    //   linksContainerRef.current.style.height = "0px";
+    // }
+  }, [showLinks]);
+
   return (
     <header>
       <div class="ctr container">
+        <button className="nav-toggle" onClick={toggleLinks}>
+          <FaBars />
+        </button>
         <div class="logo">
           <a href="#" class="hdr_logo">
             <svg
@@ -28,14 +50,15 @@ function Navbar() {
         </div>
 
         <nav>
-          <ul>
-            <li href="#">hotels</li>
-            <li href="#">restaurant</li>
-            <li href="#">activities</li>
-            <li href="#">events</li>
-            <li href="#">services</li>
-            <li href="#">blog</li>
-            <li href="#">more</li>
+          <ul className="links" ref={linksRef}>
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <a href="#">{text}</a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -47,12 +70,8 @@ function Navbar() {
             </button>
 
             <button>
-              <FaUserAlt />
-              <span> Log In </span>
-            </button>
-            <span>/</span>
-            <button class="signUp">
-              <span>Sign Up</span>
+              <FaUserAlt className="userHead" />
+              <span className="login"> Log In / Sign Up</span>
             </button>
           </span>
         </div>

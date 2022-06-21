@@ -5,6 +5,19 @@
   font-family: "Nunito", sans-serif;
 }
 
+// @mixin pad {
+//   @media (max-width: 768px) {
+//     // 寬度768px以內就執行這裡面的css
+//     @content;
+//   }
+// }
+
+@mixin mobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
 main {
   section.backImage {
     position: relative;
@@ -20,32 +33,38 @@ main {
     align-items: center;
     flex-direction: column;
     // text-align: center;
-    padding: 20vh;
-
+    padding: 20vh 0;
+    @include mobile {
+      // padding: 0;
+    }
     h1 {
       font-size: 3.5rem;
       color: white;
       margin: 2rem 0rem;
+      @include mobile {
+        font-size: 2rem;
+        text-align: center;
+      }
     }
 
-    div.search-container {
-      display: flex;
-      justify-content: center;
-      width: 90%;
-      .input_destination {
-        width: 30%;
-        input {
-          width: 100%;
-          font-size: 16px;
-          padding: 1rem 0.5rem;
-          border: none;
-        }
-      }
-      button {
-        font-size: 16px;
-        padding: 1rem 0.5rem;
-        border: none;
-      }
-    }
+    // div.search-container {
+    //   display: flex;
+    //   justify-content: center;
+    //   width: 90%;
+    //   .input_destination {
+    //     width: 30%;
+    //     input {
+    //       width: 100%;
+    //       font-size: 16px;
+    //       padding: 1rem 0.5rem;
+    //       border: none;
+    //     }
+    //   }
+    //   button {
+    //     font-size: 16px;
+    //     padding: 1rem 0.5rem;
+    //     border: none;
+    //   }
+    // }
   }
 }

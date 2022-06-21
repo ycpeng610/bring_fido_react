@@ -5,6 +5,12 @@
   font-family: "Nunito", sans-serif;
 }
 
+@mixin mobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
 main {
   section.second {
     display: flex;
@@ -15,10 +21,17 @@ main {
     h2 {
       font-size: 2.5rem;
       margin: 3rem 0rem;
+      @include mobile {
+        font-size: 1.8rem;
+        text-align: center;
+      }
     }
 
     section.cards {
       display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
       div.card {
         // padding: 1rem;
         h4 {
@@ -42,6 +55,10 @@ main {
       border-radius: 2px;
       text-decoration: none;
       font-size: 1.2rem;
+      @include mobile {
+        margin: 1.5rem 0;
+        padding: 0.5rem 2rem;
+      }
     }
   }
 }

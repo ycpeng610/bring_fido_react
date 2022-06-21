@@ -12,9 +12,19 @@ footer div.footer div.grid {
   width: 100%;
   display: flex;
 }
+@media (max-width: 375px) {
+  footer div.footer div.grid {
+    flex-direction: column;
+  }
+}
 footer div.footer div.grid div.grid_column_left {
   margin: auto;
   width: 55%;
+}
+@media (max-width: 375px) {
+  footer div.footer div.grid div.grid_column_left {
+    display: none;
+  }
 }
 footer div.footer div.grid div.grid_column_left .footer_cnt h2 {
   font-size: 1rem;
@@ -41,6 +51,12 @@ footer div.footer div.grid div.grid_column_right {
   text-align: center;
   padding: 2rem;
 }
+@media (max-width: 375px) {
+  footer div.footer div.grid div.grid_column_right {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
 footer div.footer div.grid div.grid_column_right a {
   color: white;
   text-decoration: none;
@@ -58,6 +74,7 @@ footer div.footer div.grid div.grid_column_right tag {
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
+  color: white;
 }
 footer div.footer div.grid div.grid_column_right div.socialIcon a {
   padding: 0.5rem;
@@ -78,7 +95,21 @@ footer div.sub_footer div.ctr_ft div.footer_left {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 375px) {
+  footer div.sub_footer div.ctr_ft div.footer_left {
+    width: 80%;
+    flex-direction: column-reverse;
+  }
+  footer div.sub_footer div.ctr_ft div.footer_left span {
+    margin: 0.2rem;
+  }
+}
 footer div.sub_footer div.ctr_ft div.footer_right {
   width: 50%;
   text-align: end;
+}
+@media (max-width: 375px) {
+  footer div.sub_footer div.ctr_ft div.footer_right {
+    width: 20%;
+  }
 }/*# sourceMappingURL=Footer.css.map */

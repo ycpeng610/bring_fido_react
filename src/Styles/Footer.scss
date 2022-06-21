@@ -5,15 +5,27 @@
   font-family: "Nunito", sans-serif;
 }
 
+@mixin mobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
 footer {
   div.footer {
     background-color: #02a6dd;
     div.grid {
       width: 100%;
       display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
       div.grid_column_left {
         margin: auto;
         width: 55%;
+        @include mobile {
+          display: none;
+        }
         .footer_cnt {
           h2 {
             font-size: 1rem;
@@ -45,6 +57,10 @@ footer {
         align-items: center;
         text-align: center;
         padding: 2rem;
+        @include mobile {
+          width: 100%;
+          justify-content: space-around;
+        }
 
         a {
           color: white;
@@ -66,6 +82,7 @@ footer {
           padding: 0.5rem;
           font-size: 1rem;
           font-weight: bold;
+          color: white;
         }
 
         div.socialIcon {
@@ -81,6 +98,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 
     background-color: #02a6dd;
+
     div.ctr_ft {
       display: flex;
       width: 100%;
@@ -92,10 +110,20 @@ footer {
         width: 50%;
         display: flex;
         justify-content: space-between;
+        @include mobile {
+          width: 80%;
+          flex-direction: column-reverse;
+          span {
+            margin: 0.2rem;
+          }
+        }
       }
       div.footer_right {
         width: 50%;
         text-align: end;
+        @include mobile {
+          width: 20%;
+        }
       }
     }
   }
