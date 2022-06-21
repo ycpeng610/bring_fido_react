@@ -54,14 +54,18 @@ header {
     // transform: rotate(90deg);
   }
 
-  nav {
+  .links-container {
+    height: auto !important;
+    @include mobile {
+      height: 0;
+      overflow: hidden;
+    }
     ul {
       display: flex;
       list-style-type: none;
       justify-content: space-around;
       @include mobile {
-        // display: flex;
-        display: none;
+        display: flex;
         flex-direction: column;
       }
       li {
@@ -73,6 +77,7 @@ header {
           text-decoration: none;
           @include mobile {
             color: blue;
+            height: 100px;
           }
         }
       }

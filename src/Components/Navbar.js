@@ -8,6 +8,7 @@ function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
+  console.log("showLinks: ", showLinks);
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
@@ -16,10 +17,9 @@ function Navbar() {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
     if (showLinks) {
       linksContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linksContainerRef.current.style.height = "0px";
     }
-    // else {
-    //   linksContainerRef.current.style.height = "0px";
-    // }
   }, [showLinks]);
 
   return (
@@ -49,18 +49,18 @@ function Navbar() {
           </a>
         </div>
 
-        <nav>
+        <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
             {links.map((link) => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <a href="#">{text}</a>
+                  <a href={url}>{text}</a>
                 </li>
               );
             })}
           </ul>
-        </nav>
+        </div>
 
         <div class="hdr_segment">
           <span class="dropdownWrapper">

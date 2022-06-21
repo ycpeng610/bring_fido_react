@@ -47,18 +47,27 @@ header .nav-toggle {
 header .nav-toggle:hover {
   color: rgb(136, 134, 134);
 }
-header nav ul {
+header .links-container {
+  height: auto !important;
+}
+@media (max-width: 375px) {
+  header .links-container {
+    height: 0;
+    overflow: hidden;
+  }
+}
+header .links-container ul {
   display: flex;
   list-style-type: none;
   justify-content: space-around;
 }
 @media (max-width: 375px) {
-  header nav ul {
-    display: none;
+  header .links-container ul {
+    display: flex;
     flex-direction: column;
   }
 }
-header nav ul li a {
+header .links-container ul li a {
   color: rgb(93, 88, 88);
   text-transform: uppercase;
   margin: 0 1rem;
@@ -66,8 +75,9 @@ header nav ul li a {
   text-decoration: none;
 }
 @media (max-width: 375px) {
-  header nav ul li a {
+  header .links-container ul li a {
     color: blue;
+    height: 100px;
   }
 }
 header span {
