@@ -12,12 +12,12 @@ import {
 const Footer = () => {
   return (
     <footer>
-      <div class="footer">
-        <div class="grid ctr">
+      <div className="footer">
+        <div className="grid ctr">
           {/* <!-- left --> */}
-          <div class="grid_column_left">
+          <div className="grid_column_left">
             <nav>
-              <div class="footer_cnt">
+              <div className="footer_cnt">
                 <h2>COMPANY INFO</h2>
                 <ul>
                   <li>
@@ -43,7 +43,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="footer_cnt">
+              <div className="footer_cnt">
                 <h2>PARTNERS</h2>
                 <ul>
                   <li>
@@ -69,7 +69,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="footer_cnt">
+              <div className="footer_cnt">
                 <h2>CUSTOMER SERVICE</h2>
                 <ul>
                   <li>
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
 
           {/* <!-- right --> */}
-          <div class="grid_column_right">
+          <div className="grid_column_right">
             <h2>
               <a href="#">Post a Spot</a>
             </h2>
@@ -109,8 +109,8 @@ const Footer = () => {
               <br />
               by sharing your dog’s favorite spot.
             </p>
-            <tag>#BringFido</tag>
-            <div class="socialIcon">
+            <span>#BringFido</span>
+            <div className="socialIcon">
               <a href="#">
                 <FaFacebook />
               </a>
@@ -134,15 +134,15 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="sub_footer">
-        <div class="ctr ctr_ft">
-          <div class="footer_left">
+      <div className="sub_footer">
+        <div className="ctr ctr_ft">
+          <div className="footer_left">
             <span>© 2005-2022 Kendall Media, Inc.</span>
             <span>Privacy Policy & Ads Disclosure</span>
             <span>Terms & Conditions</span>
             <span>Sitemap</span>
           </div>
-          <div class="footer_right">
+          <div className="footer_right">
             <span>$USD</span>
           </div>
         </div>

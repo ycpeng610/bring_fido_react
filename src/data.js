@@ -68,19 +68,19 @@ export const blogs = [
 export const services = [
   {
     id: 1,
-    img: "../images/perk1.webp",
+    image: "perk1.webp",
     title: "Dog Owner Reviews",
     desc: "Read thousands of reviews to sniff out the best pet friendly hotels, restaurants, and attractions in all 50 states and more than 100 countries.",
   },
   {
     id: 2,
-    img: "../images/perk2.webp",
+    image: "perk2.webp",
     title: "Canine Concierge",
     desc: "When you make a hotel reservation, our Canine Concierge ensures you’re assigned to a pet-friendly room, so there are no surprises at check-in.",
   },
   {
     id: 3,
-    img: "../images/perk3.webp",
+    image: "perk3.webp",
     title: "No Booking Fees",
     desc: "Enjoy a low rate on a pet friendly hotel every time! There is no booking fee and reservations are always backed by our Pet Friendly Guarantee.",
   },

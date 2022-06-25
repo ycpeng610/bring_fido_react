@@ -24,17 +24,17 @@ function Navbar() {
 
   return (
     <header>
-      <div class="ctr container">
+      <div className="ctr container">
         <button className="nav-toggle" onClick={toggleLinks}>
           <FaBars />
         </button>
-        <div class="logo">
-          <a href="#" class="hdr_logo">
+        <div className="logo">
+          <a href="#" className="hdr_logo">
             <svg
               width="191px"
               height="40px"
               viewBox="180 19 191 40"
-              class="hdr__img hdr__img--logo"
+              className="hdr__img hdr__img--logo"
             >
               <title>
                 BringFido: Pet Friendly Hotels &amp; Dog Travel Directory
@@ -62,8 +62,8 @@ function Navbar() {
           </ul>
         </div>
 
-        <div class="hdr_segment">
-          <span class="dropdownWrapper">
+        <div className="hdr_segment">
+          <span className="dropdownWrapper">
             <button>
               <FaPaw className="circle" />
               <FaCaretDown className="caret-down" />

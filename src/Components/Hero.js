@@ -3,20 +3,20 @@ import "../Styles/Hero.css";
 
 const Hero = () => {
   return (
-    <section class="backImage">
+    <section className="backImage">
       <h1>Where do you want to bring Fido?</h1>
-      {/* <div class="search-container">
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">
+      {/* <div className="search-container">
+        <div className="dropdown">
+          <button onclick="myFunction()" className="dropbtn">
             Dropdown
           </button>
-          <div id="myDropdown" class="dropdown-content">
+          <div id="myDropdown" className="dropdown-content">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
           </div>
         </div>
-        <span class="input_destination">
+        <span className="input_destination">
           <input type="text" placeholder="Search.." name="search" />
         </span>
         <button type="submit">Submit</button>

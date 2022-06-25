@@ -56,9 +56,11 @@ header {
 
   .links-container {
     height: auto !important;
+    border: solid 2px red;
     @include mobile {
       height: 0;
       overflow: hidden;
+      order: 1;
     }
     ul {
       display: flex;

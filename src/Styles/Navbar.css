@@ -49,11 +49,13 @@ header .nav-toggle:hover {
 }
 header .links-container {
   height: auto !important;
+  border: solid 2px red;
 }
 @media (max-width: 375px) {
   header .links-container {
     height: 0;
     overflow: hidden;
+    order: 1;
   }
 }
 header .links-container ul {

@@ -3,22 +3,22 @@ import "../Styles/Blog.css";
 
 const Blog = ({ items }) => {
   return (
-    <section class="third ctr">
+    <section className="third ctr">
       <h3>LATEST FROM THE BLOG</h3>
-      <div class="gridcontainer">
+      <div className="gridcontainer">
         {items.map((blog) => {
           const { id, title, img, link } = blog;
           return (
             <a href={link}>
               <img src={img} alt={title} />
-              <div class="articleTitle_title">
+              <div className="articleTitle_title">
                 <span>{title}</span>
               </div>
             </a>
           );
         })}
       </div>
-      <div class="seeMore">
+      <div className="seeMore">
         <button type="submit">See More Posts</button>
       </div>
     </section>
