@@ -5,14 +5,19 @@
   font-family: "Nunito", sans-serif;
 }
 
-@mixin mobile {
-  @media (max-width: 375px) {
-    @content;
-  }
+// @mixin mobile {
+//   @media (max-width: 960px) {
+//     @content;
+//   }
+// }
+// 電腦版內容物控制都放在1020px裡面
+.ctr {
+  max-width: 1020px;
 }
 
 main {
   section.second {
+    justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,11 +34,8 @@ main {
 
     section.cards {
       display: flex;
-      @include mobile {
-        flex-direction: column;
-      }
       div.card {
-        // padding: 1rem;
+        padding: 1rem; //如果加左右padding的話，電腦版的文字就不會靠最左右邊
         h4 {
           font-size: 1rem;
           font-weight: bolder;
@@ -58,6 +60,22 @@ main {
       @include mobile {
         margin: 1.5rem 0;
         padding: 0.5rem 2rem;
+      }
+    }
+  }
+}
+
+// ipad mini寬度768px，這裡是設定ipad mini以下的條件
+@media screen and (max-width: 700px) {
+  main {
+    section.second {
+      h2 {
+        padding: 0 1rem;
+      }
+      .cards {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
       }
     }
   }

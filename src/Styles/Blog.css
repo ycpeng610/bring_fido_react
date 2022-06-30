@@ -14,11 +14,6 @@ main section.third .gridcontainer {
   justify-content: space-between;
   gap: 2rem;
 }
-@media (max-width: 375px) {
-  main section.third .gridcontainer {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 main section.third .gridcontainer img {
   width: 100%;
 }
@@ -35,11 +30,6 @@ main section.third div.seeMore {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 375px) {
-  main section.third div.seeMore {
-    flex-direction: column;
-  }
-}
 main section.third div.seeMore button {
   border: none;
   margin: 1.5rem;
@@ -50,9 +40,26 @@ main section.third div.seeMore button {
   text-decoration: none;
   font-size: 1.2rem;
 }
-@media (max-width: 375px) {
-  main section.third div.seeMore button {
-    margin: 1.5rem 0;
-    padding: 0.5rem 2rem;
+
+@media screen and (max-width: 1020px) {
+  .ctr {
+    padding: 0 1rem;
+  }
+
+  main section.third h3 {
+    padding: 1rem;
+  }
+  main section.third .gridcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 630px) {
+  main section.third h3 {
+    padding: 1rem;
+  }
+  main section.third .gridcontainer {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 1rem;
   }
 }/*# sourceMappingURL=Blog.css.map */

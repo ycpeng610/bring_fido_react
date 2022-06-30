@@ -9,7 +9,7 @@ const Blog = ({ items }) => {
         {items.map((blog) => {
           const { id, title, img, link } = blog;
           return (
-            <a href={link}>
+            <a href={link} key={id}>
               <img src={img} alt={title} />
               <div className="articleTitle_title">
                 <span>{title}</span>

@@ -14,7 +14,7 @@ const Services = ({ items }) => {
           console.log(blog);
           const { id, title, image, desc } = blog;
           return (
-            <div className="card">
+            <div className="card" key={id}>
               <div className="image-container">
                 <img src={require("../images/" + image)} alt={title} />
                 <h4>{title}</h4>

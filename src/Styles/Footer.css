@@ -12,7 +12,7 @@ footer div.footer div.grid {
   width: 100%;
   display: flex;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   footer div.footer div.grid {
     flex-direction: column;
   }
@@ -21,7 +21,7 @@ footer div.footer div.grid div.grid_column_left {
   margin: auto;
   width: 55%;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   footer div.footer div.grid div.grid_column_left {
     display: none;
   }
@@ -51,7 +51,7 @@ footer div.footer div.grid div.grid_column_right {
   text-align: center;
   padding: 2rem;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   footer div.footer div.grid div.grid_column_right {
     width: 100%;
     justify-content: space-around;
@@ -95,7 +95,7 @@ footer div.sub_footer div.ctr_ft div.footer_left {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   footer div.sub_footer div.ctr_ft div.footer_left {
     width: 80%;
     flex-direction: column-reverse;
@@ -108,7 +108,7 @@ footer div.sub_footer div.ctr_ft div.footer_right {
   width: 50%;
   text-align: end;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   footer div.sub_footer div.ctr_ft div.footer_right {
     width: 20%;
   }

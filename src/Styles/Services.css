@@ -5,7 +5,12 @@
   font-family: "Nunito", sans-serif;
 }
 
+.ctr {
+  max-width: 1020px;
+}
+
 main section.second {
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +20,7 @@ main section.second h2 {
   font-size: 2.5rem;
   margin: 3rem 0rem;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   main section.second h2 {
     font-size: 1.8rem;
     text-align: center;
@@ -23,11 +28,6 @@ main section.second h2 {
 }
 main section.second section.cards {
   display: flex;
-}
-@media (max-width: 375px) {
-  main section.second section.cards {
-    flex-direction: column;
-  }
 }
 main section.second section.cards div.card h4 {
   font-size: 1rem;
@@ -47,9 +47,20 @@ main section.second button {
   text-decoration: none;
   font-size: 1.2rem;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   main section.second button {
     margin: 1.5rem 0;
     padding: 0.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main section.second h2 {
+    padding: 0 1rem;
+  }
+  main section.second .cards {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
   }
 }/*# sourceMappingURL=Services.css.map */

@@ -5,11 +5,11 @@
   font-family: "Nunito", sans-serif;
 }
 
-@mixin mobile {
-  @media (max-width: 375px) {
-    @content;
-  }
-}
+// @mixin mobile {
+//   @media (max-width: 960px) {
+//     @content;
+//   }
+// }
 
 main {
   section.third {
@@ -21,9 +21,9 @@ main {
       grid-template-columns: repeat(3, 1fr);
       justify-content: space-between;
       gap: 2rem;
-      @include mobile {
-        grid-template-columns: repeat(1, 1fr);
-      }
+      // @include mobile {
+      //   grid-template-columns: repeat(1, 1fr);
+      // }
       img {
         width: 100%;
       }
@@ -48,9 +48,9 @@ main {
     div.seeMore {
       display: flex;
       justify-content: center;
-      @include mobile {
-        flex-direction: column;
-      }
+      // @include mobile {
+      //   flex-direction: column;
+      // }
       button {
         border: none;
         margin: 1.5rem;
@@ -60,11 +60,59 @@ main {
         border-radius: 2px;
         text-decoration: none;
         font-size: 1.2rem;
-        @include mobile {
-          margin: 1.5rem 0;
-          padding: 0.5rem 2rem;
-        }
+        // @include mobile {
+        //   margin: 1.5rem 0;
+        //   padding: 0.5rem 2rem;
+        // }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .ctr {
+    padding: 0 1rem;
+  }
+  main {
+    section.third {
+      h3 {
+        padding: 1rem;
+      }
+      .gridcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+      }
+    }
+
+    // div.seeMore {
+    //   // flex-direction: column;
+    //   button {
+    //     margin: 1.5rem 0;
+    //     padding: 0.5rem 2rem;
+    //   }
+    // }
+  }
+}
+
+// ipad mini寬度768px，這裡是設定ipad mini以下的條件
+@media screen and (max-width: 630px) {
+  main {
+    section.third {
+      h3 {
+        padding: 1rem;
+      }
+      .gridcontainer {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 1rem;
+      }
+    }
+
+    // div.seeMore {
+    //   // flex-direction: column;
+    //   button {
+    //     margin: 1.5rem 0;
+    //     padding: 0.5rem 2rem;
+    //   }
+    // }
   }
 }

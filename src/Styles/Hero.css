@@ -9,7 +9,7 @@ main section.backImage {
   position: relative;
   min-height: 95vh;
   width: 100%;
-  background-image: url("../images/backgroundimg.jpeg");
+  background-image: url("https://photos.bringfido.com/hero/gatlinburg_2.jpg?size=736&density=2x");
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -23,7 +23,7 @@ main section.backImage h1 {
   color: white;
   margin: 2rem 0rem;
 }
-@media (max-width: 375px) {
+@media (max-width: 960px) {
   main section.backImage h1 {
     font-size: 2rem;
     text-align: center;

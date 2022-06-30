@@ -30,37 +30,37 @@ export const blogs = [
   {
     id: 1,
     title: "Can I Bring My Dog to Hotel Indigo?",
-    img: "https://photos.bringfido.com/photo/2022/05/25/Hotel_Indigo_Hero_zCLCpXG.jpg?size=tile&amp;density=1x",
+    img: "https://photos.bringfido.com/photo/2021/12/23/DealoftheWeek-Thumb.jpg?size=tile&density=2x",
     link: "google.com.tw",
   },
   {
     id: 2,
     title: "Best Dog Beaches on Lakes and Rivers",
-    img: "https://photos.bringfido.com/photo/2020/06/22/always_sunny_with_olive_94358748_2294943120807528_3676881248808111175_n.jpg?size=tile&density=1x",
+    img: "https://photos.bringfido.com/photo/2019/05/30/July_4_Events_Thumb.jpg?size=tile&density=2x",
     link: "google.com.tw",
   },
   {
     id: 3,
     title: "Best Gulf Coast Dog Beaches",
-    img: "https://photos.bringfido.com/photo/2019/07/02/10747_20683_4NNG5sg.jpg?size=tile&density=1x",
+    img: "https://photos.bringfido.com/photo/2022/06/16/thumb.jpg?size=tile&density=2x",
     link: "google.com.tw",
   },
   {
     id: 4,
     title: "Best East Coast Dog Beaches",
-    img: "https://photos.bringfido.com/photo/2019/05/01/IMG_2148.JPG?size=tile&density=1x",
+    img: "https://photos.bringfido.com/photo/2022/06/14/MI_Mackinac_Island_2_Linda_Axnickcandi.jpeg?size=tile&density=2x",
     link: "google.com.tw",
   },
   {
     id: 5,
     title: "Best West Coast Dog Beaches",
-    img: "https://photos.bringfido.com/photo/2019/04/30/56262994_663339087471947_2430361196246870857_n.jpg?size=tile&density=1x",
+    img: "https://photos.bringfido.com/photo/2022/06/15/Camp_Unleashed_iuckTlY.jpeg?size=tile&density=2x",
     link: "google.com.tw",
   },
   {
     id: 6,
     title: "Most Unique Pet-Friendly Airbnb in Every State",
-    img: "https://photos.bringfido.com/photo/2022/05/19/uniqueairbnbthumb.jpeg?size=tile&density=1x",
+    img: "https://photos.bringfido.com/photo/2022/06/17/thumbnail_edited.jpg?size=tile&density=2x",
     link: "google.com.tw",
   },
 ];

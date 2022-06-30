@@ -5,26 +5,16 @@
   font-family: "Nunito", sans-serif;
 }
 
-@mixin mobile {
-  @media (max-width: 375px) {
-    // 寬度768px以內就執行這裡面的css
-    @content;
-  }
-}
-
 .ctr {
   max-width: 1020px; //1020px 1230px
   margin: 0 auto;
-  // border: solid 1px red; // 可以看一下整體格式
-  @include mobile {
-    padding: 0 30px;
-  }
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 header {
@@ -37,91 +27,139 @@ header {
   background-color: white;
   box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
 
-  .nav-toggle {
-    font-size: 1.5rem;
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
     color: rgb(93, 88, 88);
-    background: transparent;
-    border-color: transparent;
-    // transition: all 0.3s linear;
-    cursor: pointer;
-    display: none;
-    @include mobile {
-      display: flex;
-    }
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    font-size: 0.5rem;
   }
-  .nav-toggle:hover {
+
+  .nav-links:hover {
     color: rgb(136, 134, 134);
-    // transform: rotate(90deg);
+    transition: all 0.2s ease-out;
+  }
+  .nav-links-mobile {
+    display: none;
   }
 
-  .links-container {
-    height: auto !important;
-    border: solid 2px red;
-    @include mobile {
-      height: 0;
-      overflow: hidden;
-      order: 1;
+  // 漢堡
+  .menu-icon {
+    display: none;
+  }
+
+  button {
+    // remove default button style
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    span {
+      font-size: 0.5rem;
     }
-    ul {
+    // vertical-align: middle; //這邊是希望login signup可以上下置中，但沒有效果
+
+    .login {
+      color: rgb(93, 88, 88);
+    }
+  }
+}
+
+// // 寬度為960px以下時，執行(手機版)：
+@media screen and (max-width: 960px) {
+  header {
+    padding: 1rem;
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-menu {
       display: flex;
-      list-style-type: none;
-      justify-content: space-around;
-      @include mobile {
-        display: flex;
-        flex-direction: column;
-      }
-      li {
-        a {
-          color: rgb(93, 88, 88);
-          text-transform: uppercase;
-          margin: 0 1rem;
-          font-size: 0.6rem;
-          text-decoration: none;
-          @include mobile {
-            color: blue;
-            height: 100px;
-          }
-        }
-      }
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 4.8rem;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      justify-content: start;
     }
-  }
 
-  span {
-    color: #888;
-  }
+    .nav-menu.active {
+      background: rgba(246, 246, 246);
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      padding-top: 1rem;
+    }
 
-  div.hdr_segment {
-    button {
-      // remove default button style
-      background: none;
-      color: inherit;
-      border: none;
-      padding: 0;
-      font: inherit;
+    .nav-links {
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+      display: table;
+    }
+
+    .nav-links:hover {
+      // background-color: #fff;
+      color: #02b1e8;
+      border-radius: 0;
+    }
+
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
       cursor: pointer;
-      outline: inherit;
-      // vertical-align: middle; //這邊是希望login signup可以上下置中，但沒有效果
+    }
 
-      .circle {
-        width: 1.2rem;
-        @include mobile {
-          display: none;
-        }
-      }
+    // 漢堡點開以後，Sign Up的按鈕：
+    .nav-links-mobile {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      border-radius: 4px;
+      width: 50%;
+      text-decoration: none;
+      font-size: 1rem;
+      background-color: transparent;
+      color: rgb(93, 88, 88);
+      padding: 14px 20px;
+      border: 1px solid rgb(93, 88, 88);
+      transition: all 0.3s ease-out;
+    }
 
-      .caret-down {
-        width: 0.5rem;
-        margin-right: 1rem;
-        @include mobile {
-          display: none;
-        }
-      }
-
-      .login {
-        @include mobile {
-          display: none;
-        }
-      }
+    .nav-links-mobile:hover {
+      background: #02b1e8;
+      color: #242424;
+      border: none;
+      color: aliceblue;
+      transition: 250ms;
     }
   }
 }
